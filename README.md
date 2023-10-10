@@ -167,7 +167,7 @@ request = youtube.commentThreads().list(
             regex = r'PT(\d+H)?(\d+M)?(\d+S)?'
             match = re.match(regex, duration)
             if not match:
-                return '00:00:00'
+            return '00:00:00'
             hours, minutes, seconds = match.groups()
             hours = int(hours[:-1]) if hours else 0
             minutes = int(minutes[:-1]) if minutes else 0
